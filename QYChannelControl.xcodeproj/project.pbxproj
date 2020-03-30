@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AE629FE243064B300570805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE629FD243064B300570805 /* AppDelegate.swift */; };
+		4AE62A02243064B300570805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A01243064B300570805 /* ViewController.swift */; };
+		4AE62A05243064B300570805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A03243064B300570805 /* Main.storyboard */; };
+		4AE62A07243064B400570805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A06243064B400570805 /* Assets.xcassets */; };
+		4AE62A0A243064B400570805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A08243064B400570805 /* LaunchScreen.storyboard */; };
+		4AE62A12243064D200570805 /* QYChannelControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A11243064D200570805 /* QYChannelControlViewController.swift */; };
+		4AE62A142430651700570805 /* QYChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A132430651700570805 /* QYChannelListView.swift */; };
+		4AE62A182430673200570805 /* QYChannelControlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A172430673200570805 /* QYChannelControlUtils.swift */; };
+		4AE62A1A24306F5D00570805 /* QYChannelControlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A1924306F5D00570805 /* QYChannelControlConfig.swift */; };
+		4AE62A1E243110A700570805 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A1D243110A700570805 /* TestViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4AE629FA243064B300570805 /* QYChannelControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYChannelControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE629FD243064B300570805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4AE62A01243064B300570805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AE62A04243064B300570805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4AE62A06243064B400570805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4AE62A09243064B400570805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4AE62A0B243064B400570805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE62A11243064D200570805 /* QYChannelControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelControlViewController.swift; sourceTree = "<group>"; };
+		4AE62A132430651700570805 /* QYChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelListView.swift; sourceTree = "<group>"; };
+		4AE62A172430673200570805 /* QYChannelControlUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelControlUtils.swift; sourceTree = "<group>"; };
+		4AE62A1924306F5D00570805 /* QYChannelControlConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelControlConfig.swift; sourceTree = "<group>"; };
+		4AE62A1D243110A700570805 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AE629F7243064B300570805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AE629F1243064B300570805 = {
+			isa = PBXGroup;
+			children = (
+				4AE629FC243064B300570805 /* QYChannelControl */,
+				4AE629FB243064B300570805 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AE629FB243064B300570805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AE629FA243064B300570805 /* QYChannelControl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AE629FC243064B300570805 /* QYChannelControl */ = {
+			isa = PBXGroup;
+			children = (
+				4AE629FD243064B300570805 /* AppDelegate.swift */,
+				4AE62A01243064B300570805 /* ViewController.swift */,
+				4AE62A1D243110A700570805 /* TestViewController.swift */,
+				4AE62A03243064B300570805 /* Main.storyboard */,
+				4AE62A06243064B400570805 /* Assets.xcassets */,
+				4AE62A08243064B400570805 /* LaunchScreen.storyboard */,
+				4AE62A0B243064B400570805 /* Info.plist */,
+				4AE62A1F2431DBAC00570805 /* QYChannelControl */,
+			);
+			path = QYChannelControl;
+			sourceTree = "<group>";
+		};
+		4AE62A1F2431DBAC00570805 /* QYChannelControl */ = {
+			isa = PBXGroup;
+			children = (
+				4AE62A11243064D200570805 /* QYChannelControlViewController.swift */,
+				4AE62A132430651700570805 /* QYChannelListView.swift */,
+				4AE62A172430673200570805 /* QYChannelControlUtils.swift */,
+				4AE62A1924306F5D00570805 /* QYChannelControlConfig.swift */,
+			);
+			path = QYChannelControl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4AE629F9243064B300570805 /* QYChannelControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AE62A0E243064B400570805 /* Build configuration list for PBXNativeTarget "QYChannelControl" */;
+			buildPhases = (
+				4AE629F6243064B300570805 /* Sources */,
+				4AE629F7243064B300570805 /* Frameworks */,
+				4AE629F8243064B300570805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QYChannelControl;
+			productName = QYChannelControl;
+			productReference = 4AE629FA243064B300570805 /* QYChannelControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AE629F2243064B300570805 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = yu.qiao;
+				TargetAttributes = {
+					4AE629F9243064B300570805 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4AE629F5243064B300570805 /* Build configuration list for PBXProject "QYChannelControl" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4AE629F1243064B300570805;
+			productRefGroup = 4AE629FB243064B300570805 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AE629F9243064B300570805 /* QYChannelControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AE629F8243064B300570805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AE62A0A243064B400570805 /* LaunchScreen.storyboard in Resources */,
+				4AE62A07243064B400570805 /* Assets.xcassets in Resources */,
+				4AE62A05243064B300570805 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AE629F6243064B300570805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AE62A1E243110A700570805 /* TestViewController.swift in Sources */,
+				4AE62A02243064B300570805 /* ViewController.swift in Sources */,
+				4AE62A1A24306F5D00570805 /* QYChannelControlConfig.swift in Sources */,
+				4AE62A182430673200570805 /* QYChannelControlUtils.swift in Sources */,
+				4AE629FE243064B300570805 /* AppDelegate.swift in Sources */,
+				4AE62A12243064D200570805 /* QYChannelControlViewController.swift in Sources */,
+				4AE62A142430651700570805 /* QYChannelListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4AE62A03243064B300570805 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AE62A04243064B300570805 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4AE62A08243064B400570805 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AE62A09243064B400570805 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4AE62A0C243064B400570805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4AE62A0D243064B400570805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4AE62A0F243064B400570805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VMPKH5F2F;
+				INFOPLIST_FILE = QYChannelControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yu.qiao.QYChannelControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4AE62A10243064B400570805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VMPKH5F2F;
+				INFOPLIST_FILE = QYChannelControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yu.qiao.QYChannelControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AE629F5243064B300570805 /* Build configuration list for PBXProject "QYChannelControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AE62A0C243064B400570805 /* Debug */,
+				4AE62A0D243064B400570805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AE62A0E243064B400570805 /* Build configuration list for PBXNativeTarget "QYChannelControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AE62A0F243064B400570805 /* Debug */,
+				4AE62A10243064B400570805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AE629F2243064B300570805 /* Project object */;
+}
