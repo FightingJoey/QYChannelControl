@@ -162,7 +162,7 @@ class QYChannelControlViewController: UIViewController {
         
         // 获取当前VC
         let currentVC = pageVC?.viewControllers?.first
-        let currentTitle = currentVC?.title
+        let currentTitle = currentVC?.markTitle
         let targetTitle = channelFor(index: index)
         if let title = currentTitle, title == targetTitle {
             return currentVC
@@ -170,20 +170,18 @@ class QYChannelControlViewController: UIViewController {
         
         // 去缓存中查找是否显示过，如果之前显示过，则从内存中读取
         for vc in showedVCList {
-            if let title = vc.title, title == targetTitle {
+            if let title = vc.markTitle, title == targetTitle {
                return vc
             }
         }
         
         // 获取Index对应的ViewController
         if let viewC = dataSource?.viewControllerFor(index: index) {
-            viewC.title = channelFor(index: index)
+            viewC.markTitle = channelFor(index: index)
             showedVCList.append(viewC)
             addChild(viewC)
             return viewC
         }
-        print("selected %ld", selectedIndex)
-        print("index - %d", index)
         return nil
     }
     
@@ -267,3 +265,15 @@ extension QYChannelControlViewController: QYChannelListViewDelegate {
     }
 }
 
+fileprivate var QY_Mark_Title: String = "QY_Mark_Title"
+
+extension UIViewController {
+    var markTitle: String? {
+        get {
+            return (objc_getAssociatedObject(self, &QY_Mark_Title) as? String)
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &QY_Mark_Title, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}

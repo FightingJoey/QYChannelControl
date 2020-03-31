@@ -52,7 +52,7 @@ class ViewController: UIViewController {
 extension ViewController: QYChannelControlViewControllerDataSource {
     func viewControllerFor(index: Int) -> UIViewController {
         let view = TestViewController()
-        view.title = datas[index]
+        view.markTitle = datas[index]
         return view
     }
     

@@ -14,7 +14,7 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
                 
         let label = UILabel()
-        label.text = title
+        label.text = markTitle
         label.textColor = UIColor.black
         label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
         view.addSubview(label)
