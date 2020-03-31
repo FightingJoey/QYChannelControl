@@ -22,6 +22,12 @@ class QYChannelControlViewController: UIViewController {
     
     var defaultIndex: Int = 0
     
+    var currentIndex: Int {
+        get {
+            return selectedIndex
+        }
+    }
+    
     // 频道列表View
     private var channelListView: QYChannelListView?
     // 分页控制器

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A518F872431E92C00FBC2D7 /* QYChannelManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518F862431E92C00FBC2D7 /* QYChannelManage.swift */; };
+		4A518F8D24325F8000FBC2D7 /* QYChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518F8C24325F8000FBC2D7 /* QYChannelView.swift */; };
 		4AE629FE243064B300570805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE629FD243064B300570805 /* AppDelegate.swift */; };
 		4AE62A02243064B300570805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A01243064B300570805 /* ViewController.swift */; };
 		4AE62A05243064B300570805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A03243064B300570805 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A518F862431E92C00FBC2D7 /* QYChannelManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelManage.swift; sourceTree = "<group>"; };
+		4A518F8C24325F8000FBC2D7 /* QYChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelView.swift; sourceTree = "<group>"; };
 		4AE629FA243064B300570805 /* QYChannelControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYChannelControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE629FD243064B300570805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE62A01243064B300570805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A518F852431E90900FBC2D7 /* QYChannelMange */ = {
+			isa = PBXGroup;
+			children = (
+				4A518F862431E92C00FBC2D7 /* QYChannelManage.swift */,
+				4A518F8C24325F8000FBC2D7 /* QYChannelView.swift */,
+			);
+			path = QYChannelMange;
+			sourceTree = "<group>";
+		};
 		4AE629F1243064B300570805 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 				4AE62A06243064B400570805 /* Assets.xcassets */,
 				4AE62A08243064B400570805 /* LaunchScreen.storyboard */,
 				4AE62A0B243064B400570805 /* Info.plist */,
+				4A518F852431E90900FBC2D7 /* QYChannelMange */,
 				4AE62A1F2431DBAC00570805 /* QYChannelControl */,
 			);
 			path = QYChannelControl;
@@ -162,6 +176,8 @@
 				4AE62A02243064B300570805 /* ViewController.swift in Sources */,
 				4AE62A1A24306F5D00570805 /* QYChannelControlConfig.swift in Sources */,
 				4AE62A182430673200570805 /* QYChannelControlUtils.swift in Sources */,
+				4A518F8D24325F8000FBC2D7 /* QYChannelView.swift in Sources */,
+				4A518F872431E92C00FBC2D7 /* QYChannelManage.swift in Sources */,
 				4AE629FE243064B300570805 /* AppDelegate.swift in Sources */,
 				4AE62A12243064D200570805 /* QYChannelControlViewController.swift in Sources */,
 				4AE62A142430651700570805 /* QYChannelListView.swift in Sources */,

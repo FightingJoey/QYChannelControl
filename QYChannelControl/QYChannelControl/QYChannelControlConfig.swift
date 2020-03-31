@@ -126,8 +126,8 @@ struct QYChannelControlConfig {
     */
     var shadowLineHeight: CGFloat = 3.0
     /**
-     阴影宽度 默认 30.0f
-     */
+    阴影宽度 默认 30.0f
+    */
     var shadowLineWidth: CGFloat = 30.0
     /**
     阴影颜色 默认 黑色
@@ -146,9 +146,9 @@ struct QYChannelControlConfig {
     */
     var shadowLineAlignment: QYChannelListViewShadowLineAlignment = .bottom
     /**
-    隐藏底部分割线 默认 NO
+    隐藏底部分割线 默认 True
     */
-    var isSeparatorLineHidden: Bool = false
+    var isSeparatorLineHidden: Bool = true
     /**
     底部分割线高度 默认 0.5
     */

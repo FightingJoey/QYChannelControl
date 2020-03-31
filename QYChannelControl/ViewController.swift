@@ -14,6 +14,8 @@ class ViewController: UIViewController {
 
     var datas: Array<String> = ["要闻","河北","财经","娱乐","体育","社会","NBA","视频","汽车","图片","科技","军事"]
     
+    var list = ["111", "222", "333", "444"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,8 +35,16 @@ class ViewController: UIViewController {
     }
     
     @objc func updateData() {
-        datas = ["娱乐","体育","视频","汽车","社会","NBA","要闻","河北","财经","图片","科技","军事"]
-        pageV?.reloadData()
+        QYChannelManage.shared.show(enabledTitles: datas, disableTitles: list, currentIndex: pageV!.currentIndex) { (datas, list, index) in
+            self.datas = datas
+            self.list = list
+            self.pageV?.reloadData(moveToIndex: index)
+            
+            // 修改配置文件
+            var config = QYChannelConfig()
+            config.columns = 4
+            QYChannelManage.shared.config = config
+        }
     }
 
 }
