@@ -7,23 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A518F872431E92C00FBC2D7 /* QYChannelManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518F862431E92C00FBC2D7 /* QYChannelManage.swift */; };
-		4A518F8D24325F8000FBC2D7 /* QYChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518F8C24325F8000FBC2D7 /* QYChannelView.swift */; };
+		4A518FD52433815200FBC2D7 /* QYChannelManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FCD2433815200FBC2D7 /* QYChannelManage.swift */; };
+		4A518FD62433815200FBC2D7 /* QYChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FCE2433815200FBC2D7 /* QYChannelView.swift */; };
+		4A518FD72433815200FBC2D7 /* QYChannelControlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FD02433815200FBC2D7 /* QYChannelControlConfig.swift */; };
+		4A518FD82433815200FBC2D7 /* QYChannelControlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FD12433815200FBC2D7 /* QYChannelControlUtils.swift */; };
+		4A518FD92433815200FBC2D7 /* QYChannelControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FD22433815200FBC2D7 /* QYChannelControlViewController.swift */; };
+		4A518FDA2433815200FBC2D7 /* QYChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FD32433815200FBC2D7 /* QYChannelListView.swift */; };
+		4A518FDB2433815200FBC2D7 /* QYIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A518FD42433815200FBC2D7 /* QYIconFont.swift */; };
+		4A518FE72433816500FBC2D7 /* iconfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FDD2433816500FBC2D7 /* iconfont.js */; };
+		4A518FE82433816500FBC2D7 /* demo.css in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FDE2433816500FBC2D7 /* demo.css */; };
+		4A518FE92433816500FBC2D7 /* iconfont.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FDF2433816500FBC2D7 /* iconfont.json */; };
+		4A518FEA2433816500FBC2D7 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE02433816500FBC2D7 /* iconfont.woff */; };
+		4A518FEB2433816500FBC2D7 /* iconfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE12433816500FBC2D7 /* iconfont.eot */; };
+		4A518FEC2433816500FBC2D7 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE22433816500FBC2D7 /* iconfont.ttf */; };
+		4A518FED2433816500FBC2D7 /* demo_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE32433816500FBC2D7 /* demo_index.html */; };
+		4A518FEE2433816500FBC2D7 /* iconfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE42433816500FBC2D7 /* iconfont.woff2 */; };
+		4A518FEF2433816500FBC2D7 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE52433816500FBC2D7 /* iconfont.svg */; };
+		4A518FF02433816500FBC2D7 /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = 4A518FE62433816500FBC2D7 /* iconfont.css */; };
 		4AE629FE243064B300570805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE629FD243064B300570805 /* AppDelegate.swift */; };
 		4AE62A02243064B300570805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A01243064B300570805 /* ViewController.swift */; };
 		4AE62A05243064B300570805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A03243064B300570805 /* Main.storyboard */; };
 		4AE62A07243064B400570805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A06243064B400570805 /* Assets.xcassets */; };
 		4AE62A0A243064B400570805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE62A08243064B400570805 /* LaunchScreen.storyboard */; };
-		4AE62A12243064D200570805 /* QYChannelControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A11243064D200570805 /* QYChannelControlViewController.swift */; };
-		4AE62A142430651700570805 /* QYChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A132430651700570805 /* QYChannelListView.swift */; };
-		4AE62A182430673200570805 /* QYChannelControlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A172430673200570805 /* QYChannelControlUtils.swift */; };
-		4AE62A1A24306F5D00570805 /* QYChannelControlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A1924306F5D00570805 /* QYChannelControlConfig.swift */; };
 		4AE62A1E243110A700570805 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE62A1D243110A700570805 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A518F862431E92C00FBC2D7 /* QYChannelManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelManage.swift; sourceTree = "<group>"; };
-		4A518F8C24325F8000FBC2D7 /* QYChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelView.swift; sourceTree = "<group>"; };
+		4A518FCD2433815200FBC2D7 /* QYChannelManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYChannelManage.swift; sourceTree = "<group>"; };
+		4A518FCE2433815200FBC2D7 /* QYChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYChannelView.swift; sourceTree = "<group>"; };
+		4A518FD02433815200FBC2D7 /* QYChannelControlConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYChannelControlConfig.swift; sourceTree = "<group>"; };
+		4A518FD12433815200FBC2D7 /* QYChannelControlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYChannelControlUtils.swift; sourceTree = "<group>"; };
+		4A518FD22433815200FBC2D7 /* QYChannelControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYChannelControlViewController.swift; sourceTree = "<group>"; };
+		4A518FD32433815200FBC2D7 /* QYChannelListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYChannelListView.swift; sourceTree = "<group>"; };
+		4A518FD42433815200FBC2D7 /* QYIconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYIconFont.swift; sourceTree = "<group>"; };
+		4A518FDD2433816500FBC2D7 /* iconfont.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = iconfont.js; sourceTree = "<group>"; };
+		4A518FDE2433816500FBC2D7 /* demo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demo.css; sourceTree = "<group>"; };
+		4A518FDF2433816500FBC2D7 /* iconfont.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iconfont.json; sourceTree = "<group>"; };
+		4A518FE02433816500FBC2D7 /* iconfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff; sourceTree = "<group>"; };
+		4A518FE12433816500FBC2D7 /* iconfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.eot; sourceTree = "<group>"; };
+		4A518FE22433816500FBC2D7 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		4A518FE32433816500FBC2D7 /* demo_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo_index.html; sourceTree = "<group>"; };
+		4A518FE42433816500FBC2D7 /* iconfont.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff2; sourceTree = "<group>"; };
+		4A518FE52433816500FBC2D7 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
+		4A518FE62433816500FBC2D7 /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
 		4AE629FA243064B300570805 /* QYChannelControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYChannelControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE629FD243064B300570805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE62A01243064B300570805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,10 +57,6 @@
 		4AE62A06243064B400570805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE62A09243064B400570805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AE62A0B243064B400570805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AE62A11243064D200570805 /* QYChannelControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelControlViewController.swift; sourceTree = "<group>"; };
-		4AE62A132430651700570805 /* QYChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelListView.swift; sourceTree = "<group>"; };
-		4AE62A172430673200570805 /* QYChannelControlUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelControlUtils.swift; sourceTree = "<group>"; };
-		4AE62A1924306F5D00570805 /* QYChannelControlConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYChannelControlConfig.swift; sourceTree = "<group>"; };
 		4AE62A1D243110A700570805 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,13 +71,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A518F852431E90900FBC2D7 /* QYChannelMange */ = {
+		4A518FCC2433815200FBC2D7 /* QYChannelMange */ = {
 			isa = PBXGroup;
 			children = (
-				4A518F862431E92C00FBC2D7 /* QYChannelManage.swift */,
-				4A518F8C24325F8000FBC2D7 /* QYChannelView.swift */,
+				4A518FCD2433815200FBC2D7 /* QYChannelManage.swift */,
+				4A518FCE2433815200FBC2D7 /* QYChannelView.swift */,
 			);
-			path = QYChannelMange;
+			name = QYChannelMange;
+			path = ../../../../Work/CaiLiFang/clfios3/CaiLiFang/Vendor/QYChannelMange;
+			sourceTree = "<group>";
+		};
+		4A518FCF2433815200FBC2D7 /* QYChannelControl */ = {
+			isa = PBXGroup;
+			children = (
+				4A518FD02433815200FBC2D7 /* QYChannelControlConfig.swift */,
+				4A518FD12433815200FBC2D7 /* QYChannelControlUtils.swift */,
+				4A518FD22433815200FBC2D7 /* QYChannelControlViewController.swift */,
+				4A518FD32433815200FBC2D7 /* QYChannelListView.swift */,
+			);
+			path = QYChannelControl;
+			sourceTree = "<group>";
+		};
+		4A518FDC2433816500FBC2D7 /* iconFont */ = {
+			isa = PBXGroup;
+			children = (
+				4A518FDD2433816500FBC2D7 /* iconfont.js */,
+				4A518FDE2433816500FBC2D7 /* demo.css */,
+				4A518FDF2433816500FBC2D7 /* iconfont.json */,
+				4A518FE02433816500FBC2D7 /* iconfont.woff */,
+				4A518FE12433816500FBC2D7 /* iconfont.eot */,
+				4A518FE22433816500FBC2D7 /* iconfont.ttf */,
+				4A518FE32433816500FBC2D7 /* demo_index.html */,
+				4A518FE42433816500FBC2D7 /* iconfont.woff2 */,
+				4A518FE52433816500FBC2D7 /* iconfont.svg */,
+				4A518FE62433816500FBC2D7 /* iconfont.css */,
+			);
+			path = iconFont;
 			sourceTree = "<group>";
 		};
 		4AE629F1243064B300570805 = {
@@ -84,19 +135,10 @@
 				4AE62A06243064B400570805 /* Assets.xcassets */,
 				4AE62A08243064B400570805 /* LaunchScreen.storyboard */,
 				4AE62A0B243064B400570805 /* Info.plist */,
-				4A518F852431E90900FBC2D7 /* QYChannelMange */,
-				4AE62A1F2431DBAC00570805 /* QYChannelControl */,
-			);
-			path = QYChannelControl;
-			sourceTree = "<group>";
-		};
-		4AE62A1F2431DBAC00570805 /* QYChannelControl */ = {
-			isa = PBXGroup;
-			children = (
-				4AE62A11243064D200570805 /* QYChannelControlViewController.swift */,
-				4AE62A132430651700570805 /* QYChannelListView.swift */,
-				4AE62A172430673200570805 /* QYChannelControlUtils.swift */,
-				4AE62A1924306F5D00570805 /* QYChannelControlConfig.swift */,
+				4A518FDC2433816500FBC2D7 /* iconFont */,
+				4A518FCF2433815200FBC2D7 /* QYChannelControl */,
+				4A518FCC2433815200FBC2D7 /* QYChannelMange */,
+				4A518FD42433815200FBC2D7 /* QYIconFont.swift */,
 			);
 			path = QYChannelControl;
 			sourceTree = "<group>";
@@ -160,8 +202,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE62A0A243064B400570805 /* LaunchScreen.storyboard in Resources */,
+				4A518FE82433816500FBC2D7 /* demo.css in Resources */,
+				4A518FEE2433816500FBC2D7 /* iconfont.woff2 in Resources */,
+				4A518FEC2433816500FBC2D7 /* iconfont.ttf in Resources */,
+				4A518FEB2433816500FBC2D7 /* iconfont.eot in Resources */,
 				4AE62A07243064B400570805 /* Assets.xcassets in Resources */,
+				4A518FEA2433816500FBC2D7 /* iconfont.woff in Resources */,
+				4A518FED2433816500FBC2D7 /* demo_index.html in Resources */,
+				4A518FF02433816500FBC2D7 /* iconfont.css in Resources */,
+				4A518FE72433816500FBC2D7 /* iconfont.js in Resources */,
 				4AE62A05243064B300570805 /* Main.storyboard in Resources */,
+				4A518FEF2433816500FBC2D7 /* iconfont.svg in Resources */,
+				4A518FE92433816500FBC2D7 /* iconfont.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,15 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A518FDA2433815200FBC2D7 /* QYChannelListView.swift in Sources */,
+				4A518FD52433815200FBC2D7 /* QYChannelManage.swift in Sources */,
+				4A518FD82433815200FBC2D7 /* QYChannelControlUtils.swift in Sources */,
+				4A518FDB2433815200FBC2D7 /* QYIconFont.swift in Sources */,
+				4A518FD92433815200FBC2D7 /* QYChannelControlViewController.swift in Sources */,
+				4A518FD72433815200FBC2D7 /* QYChannelControlConfig.swift in Sources */,
+				4A518FD62433815200FBC2D7 /* QYChannelView.swift in Sources */,
 				4AE62A1E243110A700570805 /* TestViewController.swift in Sources */,
 				4AE62A02243064B300570805 /* ViewController.swift in Sources */,
-				4AE62A1A24306F5D00570805 /* QYChannelControlConfig.swift in Sources */,
-				4AE62A182430673200570805 /* QYChannelControlUtils.swift in Sources */,
-				4A518F8D24325F8000FBC2D7 /* QYChannelView.swift in Sources */,
-				4A518F872431E92C00FBC2D7 /* QYChannelManage.swift in Sources */,
 				4AE629FE243064B300570805 /* AppDelegate.swift in Sources */,
-				4AE62A12243064D200570805 /* QYChannelControlViewController.swift in Sources */,
-				4AE62A142430651700570805 /* QYChannelListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

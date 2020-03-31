@@ -8,13 +8,13 @@
 
 import UIKit
 
-private let SCREEN_WIDTH = UIScreen.main.bounds.width
-private let SCREEN_HEIGHT = UIScreen.main.bounds.height
-
 private let QYChannelViewCellIdentifier = "QYChannelViewCellIdentifier"
 private let QYChannelViewHeaderIdentifier = "QYChannelViewHeaderIdentifier"
 
-func RGBColor(_ rgbValue: UInt) -> UIColor {
+let QYSCREEN_WIDTH = UIScreen.main.bounds.size.width
+let QYSCREEN_HEIGHT = UIScreen.main.bounds.size.height
+
+func QYRGBColor(_ rgbValue: UInt) -> UIColor {
     return UIColor(red: CGFloat((rgbValue & 0xFF0000) >> 16)/255.0, green: CGFloat((rgbValue & 0x00FF00) >> 8)/255.0, blue: CGFloat(rgbValue & 0x0000FF)/255.0, alpha: 1.0)
 }
 
@@ -37,10 +37,12 @@ class QYChannelView: UIView {
     var isEditing: Bool = false {
         didSet {
             if !isEditing {
+                // 当前不在编辑状态，找到与selectIndexTitle相等的cell
                 if let indexPathList = collectionView?.indexPathsForVisibleItems {
                     for indexP in indexPathList {
                         if let cell = collectionView?.cellForItem(at: indexP) as? QYChannelViewCell, let title = cell.title {
                             if title == selectIndexTitle {
+                                // 如果该cell在第二组，则重设selectIndex为0
                                 selectIndex = indexP.section == 0 ? indexP.item : 0
                                 selectIndexTitle = selectedArr[selectIndex]
                                 if let block = updateCurrentIndexBlock {
@@ -123,6 +125,7 @@ class QYChannelView: UIView {
                 for cell in cells {
                     if let c = cell as? QYChannelViewCell {
                         c.isEditing = isEditing
+                        c.isSelect = false
                     }
                 }
             }
@@ -195,7 +198,7 @@ class QYChannelView: UIView {
             dragingItem?.isHidden = false
             dragingItem?.frame = CGRect(x: 0, y: 0, width: item.frame.width + 6, height: item.frame.height + 6)
             dragingItem?.center = item.center
-            dragingItem?.title = item.title
+            dragingItem?.title = icon_close.code + " " + (item.title ?? "")
         }
     }
 
@@ -247,6 +250,9 @@ class QYChannelView: UIView {
             let obj = selectedArr[dragingIndexPath.item]
             selectedArr.remove(at: dragingIndexPath.item)
             recommendArr.insert(obj, at: 0)
+            if let cell = collectionView?.cellForItem(at: dragingIndexPath) as? QYChannelViewCell {
+                cell.isSelect = false
+            }
             collectionView!.moveItem(at: dragingIndexPath, to: endIndexPath)
         }
         
@@ -257,6 +263,7 @@ class QYChannelView: UIView {
                 self.dragingItem?.isHidden = true
                 if let item = self.collectionView?.cellForItem(at: endIndexPath) as? QYChannelViewCell {
                     item.isHidden = false
+                    item.isCanDrag = isDelete ? false : true
                     item.isEditing = isDelete ? false : true
                 }
                 self.indexPath = nil
@@ -281,8 +288,13 @@ extension QYChannelView: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: QYChannelViewCellIdentifier, for: indexPath) as! QYChannelViewCell
         cell.title = indexPath.section == 0 ? selectedArr[indexPath.item] : recommendArr[indexPath.item]
         cell.isFixed = indexPath.section == 0 && indexPath.item < config.fixedNum
-        cell.isSelect = indexPath.section == 0 && indexPath.item == selectIndex
+        if isEditing {
+            cell.isSelect = false
+        } else {
+            cell.isSelect = indexPath.section == 0 && indexPath.item == selectIndex
+        }
         cell.isEditing = isEditing
+        cell.isCanDrag = indexPath.section == 0 ? true : false
         return cell
     }
     
@@ -292,7 +304,12 @@ extension QYChannelView: UICollectionViewDelegate, UICollectionViewDataSource {
             let obj = recommendArr[indexPath.item]
             recommendArr.remove(at: indexPath.item)
             selectedArr.append(obj)
+            if let cell = collectionView.cellForItem(at: indexPath) as? QYChannelViewCell {
+                cell.isEditing = isEditing
+                cell.isCanDrag = true
+            }
             collectionView.moveItem(at: indexPath, to: IndexPath(item: selectedArr.count - 1, section: 0))
+            
         } else {
             if isEditing {
                 if collectionView.numberOfItems(inSection: 0) < config.fixedNum { return }
@@ -301,6 +318,10 @@ extension QYChannelView: UICollectionViewDelegate, UICollectionViewDataSource {
                 let obj = selectedArr[indexPath.item]
                 selectedArr.remove(at: indexPath.item)
                 recommendArr.insert(obj, at: 0)
+                if let cell = collectionView.cellForItem(at: indexPath) as? QYChannelViewCell {
+                    cell.isCanDrag = false
+                    cell.isSelect = false
+                }
                 collectionView.moveItem(at: indexPath, to: IndexPath(item: 0, section: 1))
             } else {
                 if let block = clickIndexBlock {
@@ -344,10 +365,17 @@ class QYChannelViewCell: UICollectionViewCell {
     var isFixed = false {
         didSet {
             if isFixed {
-                label.textColor = RGBColor(0x888888)
+                label.textColor = QYRGBColor(0x888888)
             } else {
-                label.textColor = RGBColor(0x333333)
+                label.textColor = QYRGBColor(0x333333)
             }
+        }
+    }
+    
+    // 是否可被拖动
+    var isCanDrag = true {
+        didSet {
+            updateView()
         }
     }
     
@@ -355,7 +383,13 @@ class QYChannelViewCell: UICollectionViewCell {
     var isSelect: Bool = false {
         didSet {
             if isSelect {
-                label.textColor = RGBColor(0x1363DD)
+                label.textColor = QYRGBColor(0x1363DD)
+            } else {
+                if isFixed {
+                    label.textColor = QYRGBColor(0x888888)
+                } else {
+                    label.textColor = QYRGBColor(0x333333)
+                }
             }
         }
     }
@@ -367,23 +401,13 @@ class QYChannelViewCell: UICollectionViewCell {
     }
     
     private lazy var label: UILabel = {
-        let label = UILabel(frame: self.bounds)
-        label.textAlignment = NSTextAlignment.center
-        label.font = UIFont.systemFont(ofSize: 15)
+        let label = UILabel(frame: self.bounds, fontSize: 15)
         return label
     }()
 
-    private lazy var imageView: UIImageView = {
-        let image = UIImageView(frame: CGRect(x: 2, y: 2, width: 10, height: 10))
-        image.image = UIImage(named: "close")
-        image.backgroundColor = UIColor.red
-        image.isHidden = true
-        return image
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = RGBColor(0xF6F6F6)
+        backgroundColor = QYRGBColor(0xF6F6F6)
         setupUI()
     }
     
@@ -393,20 +417,25 @@ class QYChannelViewCell: UICollectionViewCell {
     
     private func setupUI() {
         contentView.addSubview(label)
-        label.addSubview(imageView)
         contentView.layer.cornerRadius = 3
     }
     
     private func updateView() {
-        if isEditing {
-            if isFixed {
-                label.textColor = RGBColor(0x888888)
+        if !isCanDrag {
+            let text = icon_add.code + " " + (title ?? "")
+            label.text = text
+        } else {
+            if isEditing {
+                if isFixed {
+                    label.text = title
+                } else {
+                    let text = icon_close.code + " " + (title ?? "")
+                    label.text = text
+                }
             } else {
-                label.textColor = RGBColor(0x333333)
+                label.text = title
             }
         }
-        
-//        imageView.isHidden = !isEditing
     }
     
 }
@@ -420,9 +449,9 @@ class QYChannelHeaderView: UICollectionReusableView {
         didSet {
             let attrStr = NSMutableAttributedString(string: title!)
             attrStr.addAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)], range: NSRange(location: 0, length: 4))
-            attrStr.addAttributes([NSAttributedString.Key.foregroundColor: RGBColor(0x333333)], range: NSRange(location: 0, length: 4))
+            attrStr.addAttributes([NSAttributedString.Key.foregroundColor: QYRGBColor(0x333333)], range: NSRange(location: 0, length: 4))
             attrStr.addAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)], range: NSRange(location: 5, length: title!.count - 5))
-            attrStr.addAttributes([NSAttributedString.Key.foregroundColor: RGBColor(0x888888)], range: NSRange(location: 5, length: title!.count - 5))
+            attrStr.addAttributes([NSAttributedString.Key.foregroundColor: QYRGBColor(0x888888)], range: NSRange(location: 5, length: title!.count - 5))
             titleLabel.attributedText = attrStr
         }
     }
@@ -437,12 +466,12 @@ class QYChannelHeaderView: UICollectionReusableView {
         let btn = UIButton(type: UIButton.ButtonType.custom)
         btn.setTitle("编辑", for: .normal)
         btn.setTitle("完成", for: .selected)
-        btn.setTitleColor(RGBColor(0x1363DD), for: .normal)
+        btn.setTitleColor(QYRGBColor(0x1363DD), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         btn.frame = CGRect(x: 0, y: 0, width: 65, height: 30)
-        btn.center = CGPoint(x: SCREEN_WIDTH - 10 - 65/2, y: self.bounds.size.height/2)
+        btn.center = CGPoint(x: QYSCREEN_WIDTH - 10 - 65/2, y: self.bounds.size.height/2)
         btn.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
-        btn.layer.borderColor = RGBColor(0x1363DD).cgColor
+        btn.layer.borderColor = QYRGBColor(0x1363DD).cgColor
         btn.layer.borderWidth = 1
         btn.layer.cornerRadius = 4
         btn.layer.masksToBounds = true
